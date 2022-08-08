@@ -35,7 +35,8 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+const summedPrice = cart.reduce((acc, cur) => acc + cur.price, 0)
+console.log(summedPrice)
 
 
 //////////////////PROBLEM 2////////////////////
@@ -55,7 +56,10 @@ const cart = [
 
 //CODE HERE
 
-
+function calcFinalPrice(cartTotal, couponValue, tax) {
+    return cartTotal + (cartTotal * tax) - couponValue
+}
+console.log(10, 2, .1)
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -80,6 +84,12 @@ const cart = [
 /*
     TEXT ANSWER HERE
 
+    Properties:
+    firstName: type string - I chose these because the customer needs a first name and a string can store many types of characters that a name requires
+    lastName: type string - I chose these because the customer needs a last name and a string can store many types of characters that a name requires
+    streetAddress: type string - I chose these because the customer needs an address to bill and a string can store many types of characters that an address requires
+    zipCode: type number - I chose these because I want to know the customer's region to give them regional deals, a zip code is all numbers so I chose type number
+    wantsMarketingEmails: type boolean -  I want to send customers marketing emails. It's an either/or sort of situation, which fits a boolean type
 */
 
 /*
@@ -88,3 +98,11 @@ const cart = [
 */
 
 //CODE HERE
+
+const customer = {
+    firstName: 'Sam',
+    lastName: 'Bolitho',
+    streetAddress: '123 forget it drive',
+    zipCode: 73840,
+    wantsMarketingEmails: false,
+}
